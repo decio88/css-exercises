@@ -1,9 +1,15 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
 
 .container {
+  display: grid;
+  grid-template-columns: (4, 1fr);
+  grid-template-rows: (4, 1fr);
+  overflow: auto;
+  gap: 5px;
   text-align: center;
   height: 100%;
   padding: 16px;
@@ -20,15 +26,21 @@ body, html {
 }
 
 .header {
-  background-color: #FFDE22;
+  background-color: #ffde22;
+  grid-column: 1 / 4;
+  grid-row: 1;
 }
 
 .sidebar {
-  background-color: #FF7755;
+  background-color: #ff7755;
+  grid-column: 1;
+  grid-row: 2/ 4;
 }
 
 .nav {
-  background-color: #00DDFF;
+  background-color: #00ddff;
+  grid-column: 2 / 4;
+  grid-row: 2;
 }
 
 .article {
@@ -40,8 +52,12 @@ body, html {
   font-family: sans-serif;
   color: white;
   text-align: left;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / 4;
+  grid-row: 4;
 }
